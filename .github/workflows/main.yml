@@ -14,8 +14,7 @@ jobs:
       postgres:
         image: postgres:12
         env:
-          PG_USER: postgres
-          PG_PASSWORD: password
+          POSTGRES_PASSWORD: postgres
         ports: ['5432:5432']
      
     steps:
