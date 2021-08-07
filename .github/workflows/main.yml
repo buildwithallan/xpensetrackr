@@ -15,7 +15,7 @@ jobs:
         image: postgres:12
         env:
           PG_USER: postgres
-          PG_PASSWORD: password
+          PG_PASSWORD: postgres
         ports: ['5432:5432']
         options: >-
           --health-cmd pg_isready
