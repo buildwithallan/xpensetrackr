@@ -65,5 +65,11 @@ jobs:
         run: |
           bundle exec rspec spec
 
+      - name: Create Coverage Artifact
+        uses: actions/upload-artifact@2
+        with:
+          name: code-coverage
+          path: coverage/
+
      
   
