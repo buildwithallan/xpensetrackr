@@ -1,0 +1,17 @@
+<h1>Expenses#new</h1>
+<p>Find me in app/views/expenses/new.html.erb</p>
+
+<%= form_with model: @expense do |f| %>
+<%= render "shared/form_errors", form: f %>
+
+  <%= f.label :Expense_name %>
+  <%= f.text_field :expense_name %>
+
+  <%= f.label :category %>
+  <%= f.select :category, options_for_select(['Food', 'Transportation', 'Accomadation', 'Entertainment', 'Miscellaneous']), {:include_blank => ''} %>
+
+  <%= f.label :amount %>
+  <%= f.text_field :amount %>
+
+  <%= f.submit "Save Expense" %>
+<% end %>

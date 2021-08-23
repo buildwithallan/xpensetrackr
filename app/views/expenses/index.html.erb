@@ -1,0 +1,8 @@
+<h1>Expenses#index</h1>
+<p>Find me in app/views/expenses/index.html.erb</p>
+
+<% @expenses.each do |expense| %>
+  <%= expense.expense_name %>
+  <%= expense.category %>
+  <%= expense.amount %>
+<% end %>
