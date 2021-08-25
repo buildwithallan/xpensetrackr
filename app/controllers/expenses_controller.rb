@@ -11,12 +11,11 @@ class ExpensesController < ApplicationController
 
   def create
   	@expense = Expense.new(expense_params)
-
+    
   	if @expense.save
   		redirect_to expenses_path, notice: "Expense created"
   	else
-      render :new, status: :unprocessable_entity
-  		
+      render :new, status: :unprocessable_entity	
   	end
   end
 

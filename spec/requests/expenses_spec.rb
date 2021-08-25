@@ -92,8 +92,8 @@ end
     let(:expense){create(:expense)}
 
       it "will delete an expense and redirect to expenses path" do
-
         delete expense_path(expense), params: {id: expense.id}
+        
         expect(response).to have_http_status(:redirect)
         expect(response).to redirect_to expenses_path
       end
