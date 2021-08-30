@@ -1,0 +1,11 @@
+<h1>Incomes#new</h1>
+<p>Find me in app/views/incomes/new.html.erb</p>
+
+<%= form_with model: @income do |f| %>
+<%= render "shared/form_errors", form: f %>
+
+  <%= f.label :monthly_income %>
+  <%= f.text_field :monthly_income %>
+
+  <%= f.submit "Save Income"%>
+<% end %>
