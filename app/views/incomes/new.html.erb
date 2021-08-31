@@ -4,8 +4,12 @@
 <%= form_with model: @income do |f| %>
 <%= render "shared/form_errors", form: f %>
 
+  <%= f.label :Date %>
+  <%= f.date_field :income_date %>
+  
   <%= f.label :monthly_income %>
   <%= f.text_field :monthly_income %>
 
   <%= f.submit "Save Income"%>
 <% end %>
+

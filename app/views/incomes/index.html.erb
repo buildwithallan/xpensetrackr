@@ -1,2 +1,7 @@
 <h1>Incomes#index</h1>
 <p>Find me in app/views/incomes/index.html.erb</p>
+
+<% @incomes.each do |income| %>
+  <%= income.income_date %>
+  <%= income.monthly_income %>
+<% end %>
