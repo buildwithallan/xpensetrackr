@@ -3,6 +3,9 @@
 
 <%= form_with model: @expense do |f| %>
 <%= render "shared/form_errors", form: f %>
+  
+  <%= f.label :Date %>
+  <%= f.date_field :expense_date %>	
 
   <%= f.label :Expense_name %>
   <%= f.text_field :expense_name %>
