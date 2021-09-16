@@ -10,6 +10,8 @@ import "channels"
 
 import "stylesheets/application"
 
+import ("custom/navbar");
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()

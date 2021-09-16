@@ -1,12 +1,6 @@
-<% if flash[:notice] %>
-  <div>
-  	<%= flash[:notice] %>
+ <% if flash[:notice] %>
+  <div class="max-w-lg bg-blue-100 mx-auto text-center leading-normal text-blue-700 py-3 mt-5 rounded-lg" role="alert">
+  	 <%= flash[:notice] %>
   </div>
-<% end %>
-
-<% if flash[:alert] %>
-  <div>
-  	<%= flash[:alert] %>
-  </div>
-<% end %>
+ <% end %>	
 

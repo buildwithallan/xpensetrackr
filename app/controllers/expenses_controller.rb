@@ -24,7 +24,7 @@ class ExpensesController < ApplicationController
 
   def update
   	if @expense.update(expense_params)
-  		redirect_to expenses_path
+  		redirect_to expenses_path, notice: "Expense Updated"
   	else
   		render :edit, status: :unprocessable_entity		
   	end	

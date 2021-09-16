@@ -1,5 +1,5 @@
 <% if form.object.errors.any? %>
- <div>
+ <div class="max-w-md mx-auto py-3 text-center mb-5 leading-normal text-red-700 bg-red-100 rounded-lg" role="alert">
  	<% form.object.errors.full_messages.each do |message| %>
     <div><%= message %></div>
   <% end %>
