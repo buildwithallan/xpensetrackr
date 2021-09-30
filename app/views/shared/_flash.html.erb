@@ -2,5 +2,17 @@
   <div class="max-w-lg bg-blue-100 mx-auto text-center leading-normal text-blue-700 py-3 mt-5 rounded-lg" role="alert">
   	 <%= flash[:notice] %>
   </div>
- <% end %>	
+ <% end %>
+
+ <% if flash[:alert] %>
+  <div class="max-w-sm bg-red-100 mx-auto text-center leading-normal text-red-700 py-3 mt-5 rounded-lg" role="alert">
+  	 <%= flash[:alert] %>
+  </div>
+ <% end %>
+
+ 
+
+
+
+
 

@@ -1,0 +1,32 @@
+<div class="w-full max-w-xs m-auto mt-12">
+  <%= render "devise/shared/error_messages", resource: resource %>
+<div class="border border-indigo-300 shadow-lg px-8 pt-6 pb-8 mb-4">
+   <h2 class="text-center text-gray-700 font-semibold">Sign up</h2>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+      <div class="field">
+        <%= f.label :email, class: "block text-gray-700 text-sm font-semibold mb-2" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "w-full text-gray-700 rounded border border-gray-300 focus:outline-none focus:border-indigo-300 focus:ring-2 px-2 py-1 mb-3" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password, class: "block text-gray-700 text-sm font-semibold mb-2" %>
+        <% if @minimum_password_length %>
+        <em class="text-sm">(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "new-password", class: "w-full text-gray-700 rounded border border-gray-300 focus:outline-none focus:border-indigo-300 focus:ring-2 px-2 py-1 mb-3" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password_confirmation, class: "block text-gray-700 text-sm font-semibold mb-2" %>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "w-full text-gray-700 rounded border border-gray-300 focus:outline-none focus:border-indigo-300 focus:ring-2 px-2 py-1 mb-3" %>
+      </div>
+
+      <div class="actions">
+    <%= f.submit "Sign up", class: "bg-indigo-300 border border-indigo-500 px-3 h-8 text-indigo-100 cursor-pointer" %>
+  </div>
+    <% end %>
+</div>
+
+
+</div>
