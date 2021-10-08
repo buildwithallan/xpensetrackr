@@ -1,4 +1,9 @@
-<table class="table-auto mx-auto mt-5 min-w-lg border border-gray-200">
+<div class="mt-10 max-w-md mx-auto">
+<div class="mt-8">
+   <%= link_to "Add Income", new_income_path, class: "bg-transparent border border-indigo-500 h-8 p-1 rounded-lg text-indigo-700 hover:bg-indigo-400 hover:text-gray-100" %>
+</div>
+
+<table class="table-auto mt-5 min-w-full border border-gray-200">
  <thead class="bg-gray-200">
  	<tr class="sm:table-row">
  		<th scope="col" class="border border-gray-100 text-left px-3 py-2 text-gray-600 font-semibold">Date</th>
@@ -11,7 +16,7 @@
  	<tr class="border-b border-gray-200 hover:bg-gray-100">
  		<td class="text-gray-600 px-3 py-1"><%= income.income_date %></td>
  		<td class="text-gray-600 px-3 py-1"><%= income.monthly_income %></td>
- 		<td class="flex items-center px-3 py-1"><%= link_to edit_income_path(income.id) do %>
+ 		<td class="flex items-center  px-3 py-1"><%= link_to edit_income_path(income.id) do %>
 				<svg class="ml-15 w-4 h-4 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
 				<% end %>
 				<%= button_to income_path(income.id), method: :delete, data: {confirm: "Are you sure you want to delete?"} do %>
@@ -22,7 +27,7 @@
    <% end %>
  </tbody>
 </table>
-
+</div>
 
 
  

@@ -14,18 +14,18 @@
 
   <% if current_user %>
 
-   <div class="hidden md:flex items-center space-x-1">
-	  	<%=link_to "Income", new_income_path, class: "px-2 py-3 text-gray-700" %>
-	  	<%= link_to "Expense", new_expense_path, class: "px-2 py-3 text-gray-700" %>
+     <div class="hidden md:flex items-center space-x-1">
+      <%=link_to "Dashboard", dashboard_index_path, class: "px-2 py-3 text-gray-700" %>
+	  	<%=link_to "Income", incomes_path, class: "px-2 py-3 text-gray-700" %>
+	  	<%= link_to "Expense", expenses_path, class: "px-2 py-3 text-gray-700" %>
 	  	<%= link_to "Sign Out", destroy_user_session_path, class: "px-2 py-3 text-gray-700" %>
 	  </div>
-<% else %>
-	  <!-- secondary nav -->
+  <% else %>
 	  <div class="hidden md:flex items-center space-x-1">
 	  	<%=link_to "Sign In", new_user_session_path, class: "px-2 py-3 text-gray-700"%>
 	  	<%= link_to "Sign up", new_user_registration_path, class: "px-2 py-1 bg-indigo-400 text-indigo-100 rounded" %>
 	  </div>
-<% end %>
+  <% end %>
 
 	  <!-- mobile button goes here -->
 	  <div class="md:hidden flex items-center">

@@ -11,6 +11,7 @@ class IncomesController < ApplicationController
 
   def create
   	@income = Income.new(income_params)
+    @income.user = current_user
 
   	if @income.save
   	  redirect_to incomes_path

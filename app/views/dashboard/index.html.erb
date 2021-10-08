@@ -1,2 +1,40 @@
-<h1>Dashboard#index</h1>
-<p>Find me in app/views/dashboard/index.html.erb</p>
+	<h1 class="text-center mt-5 font-bold text-gray-700">Report for <%= Date.today.strftime('%B, %Y') %></h1>
+<div class="flex justify-center space-x-3 mt-5">
+
+	<div class="bg-green-200 h-20 w-40 rounded">
+		<h3 class="text-gray-600 text-center pt-3 font-semibold">Total Income</h3>
+		<p class="text-gray-600 text-center"><%= @tot_income %></p>
+	</div>
+	<div class="bg-red-200 h-20 w-40 rounded">
+		<h3 class="text-gray-600 text-center pt-3 font-semibold">Total Expense</h3>
+		<p class="text-gray-600 text-center"><%= @tot_expense %></p>
+	</div>
+	<div class="bg-indigo-200 h-20 w-40 rounded">
+		<h3 class="text-gray-600 text-center pt-3 font-semibold">Available Funds</h3>
+		<p class="text-gray-600 text-center"><%= @available_funds%></p>
+	</div>
+</div>
+
+<h2 class="text-center text-gray-600 font-semibold mt-5">Last 5 expenses</h2>
+
+<table class="table-auto mx-auto mt-3 min-w-lg border border-gray-200">
+ <thead class="bg-gray-200">
+ 	<tr>
+ 		<th scope="col" class="border border-gray-100 text-left px-3 py-2 text-gray-600 font-semibold">Date</th>
+ 		<th scope="col" class="border border-gray-100 text-left px-3 py-2 text-gray-600 font-semibold">Expense</th>
+ 		<th scope="col" class="border border-gray-100 text-left px-3 py-2 text-gray-600 font-semibold">Category</th>
+ 		<th scope="col" class="border border-gray-100 text-left px-3 py-2 text-gray-600 font-semibold">Amount</th>
+ 	</tr>
+ </thead>
+ <tbody>
+   <% @expenses.each do |expense| %>
+ 	<tr class="border-b border-gray-200 hover:bg-gray-100">
+ 		<td class="text-gray-600 px-3 py-1"><%= expense.expense_date %></td>
+ 		<td class="text-gray-600 px-3 py-1"><%= expense.expense_name %></td>
+ 		<td class="text-gray-600 px-3 py-1"><%= expense.category %></td>
+ 		<td class="text-gray-600 px-3 py-1"><%= expense.amount %></td>
+ 	</tr>
+   <% end %>
+ </tbody>
+</table>
+

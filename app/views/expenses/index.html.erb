@@ -1,4 +1,9 @@
-<table class="table-auto mx-auto mt-5 min-w-lg border border-gray-200">
+<div class="mt-10 max-w-md mx-auto">
+<div class="mt-8">
+   <%= link_to "Add Expense", new_expense_path, class: "bg-transparent border border-indigo-500 h-8 p-1 rounded-lg text-indigo-700 hover:bg-indigo-400 hover:text-gray-100" %>
+</div>
+
+<table class="table-auto mt-5 min-w-full border border-gray-200">
  <thead class="bg-gray-200">
  	<tr>
  		<th scope="col" class="border border-gray-100 text-left px-3 py-2 text-gray-600 font-semibold">Date</th>
@@ -26,4 +31,4 @@
    <% end %>
  </tbody>
 </table>
-
+</div>
