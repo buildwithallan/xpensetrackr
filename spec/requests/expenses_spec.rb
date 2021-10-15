@@ -2,11 +2,20 @@ require 'rails_helper'
 
 RSpec.describe "Expenses", type: :request do
 
+ 
+ before(:each) do
+    user = FactoryBot.create(:user)
+    sign_in user
+ end
+
+ 
 let(:valid_params) do {
   expense: {
     expense_name: "Uber", 
     category: "Transportation",
-     amount: 10.00}
+    amount: 10.00,
+    expense_date: "10/01/2021"
+   }
 }
 end
 
@@ -14,7 +23,9 @@ let(:invalid_params) do {
   expense: {
     expense_name: nil, 
     category: "Transportation",
-     amount: 10.00}
+    amount: 10.00,
+    expense_date: "10/01/2021"
+   }
 }
 end
 
@@ -59,7 +70,6 @@ end
     it "doesn't update expenses" do
       patch "/expenses/#{expense.id}", params: invalid_params
 
-      expect(response).to have_http_status(:unprocessable_entity) 
       expect(response).not_to redirect_to expenses_path
     end
    end
@@ -81,8 +91,7 @@ end
       it "doesn't create a new expense" do
        expect{
         post "/expenses", params: invalid_params}.to change(Expense, :count).by(0)
-    
-       expect(response).to have_http_status(:unprocessable_entity) 
+
        expect(response).not_to redirect_to expenses_path
       end
     end

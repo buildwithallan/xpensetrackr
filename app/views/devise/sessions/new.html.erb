@@ -1,5 +1,5 @@
 <div class="w-full max-w-xs m-auto mt-12">
- <h2 class="text-center text-2xl font-bold">Xpensetrackr</h2>
+ <h2 class="text-center text-2xl font-bold mb-3">Xpensetrackr</h2>
 
  <div class="border border-indigo-300 shadow-lg px-8 pt-6 pb-8 mb-4 rounded-lg">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -10,21 +10,13 @@
 
   <div class="field">
     <%= f.label :password, class: "block text-gray-700 text-sm font-semibold mb-2" %>
-    <%= f.password_field :password, autocomplete: "current-password", class: "w-full text-gray-700 rounded shadow-lg border border-gray-300 focus:outline-none focus:border-indigo-300 focus:ring-2 px-2 py-1 mb-3" %>
+    <%= f.password_field :password, autocomplete: "current-password", class: "w-full text-gray-700 rounded shadow-lg border border-gray-300 focus:outline-none focus:border-indigo-300 focus:ring-2 px-2 py-1 mb-8" %>
   </div>
 
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me, class: "text-sm" %>
-    </div>
-  <% end %>
-
   <div class="actions">
-    <%= f.submit "Log in", class: "bg-indigo-300 border border-indigo-500 px-3 h-8 text-indigo-100 cursor-pointer" %>
+    <%= f.submit "Log in", class: "bg-indigo-300 border border-indigo-500 px-3 h-8 text-indigo-100 cursor-pointer hover:border-gray-500 hover:bg-indigo-500" %>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
 </div>
 </div>

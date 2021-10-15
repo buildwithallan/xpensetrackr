@@ -21,9 +21,8 @@ Rails.application.routes.draw do
   end
   
  
-  
+  get 'main/index'
   get 'dashboard/index'
-  root to: "main#index"
 
   resources :incomes
   resources :expenses

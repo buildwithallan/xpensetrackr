@@ -17,7 +17,7 @@ class ExpensesController < ApplicationController
   	if @expense.save
   		redirect_to expenses_path, notice: "Expense created"
   	else
-      render :new, status: :unprocessable_entity	
+      render :new
   	end
   end
 
@@ -28,7 +28,7 @@ class ExpensesController < ApplicationController
   	if @expense.update(expense_params)
   		redirect_to expenses_path, notice: "Expense Updated"
   	else
-  		render :edit, status: :unprocessable_entity		
+  		render :edit	
   	end	
   end
 

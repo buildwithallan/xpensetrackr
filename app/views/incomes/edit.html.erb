@@ -1,0 +1,15 @@
+<p class="text-center mt-3">Edit Income</p>
+
+<div class="mt-10 max-w-md mx-auto">
+	<%= form_with model: @income do |f| %>
+	<%= render "shared/form_errors", form: f %>
+
+	  <%= f.label :Date, class: "block text-gray-700" %>
+	  <%= f.date_field :income_date, class: "mt-1 w-full rounded-md border border-gray-300 shadow-sm focus:outline-none focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 px-2 py-1 mb-2"%>
+
+	  <%= f.label :monthly_income, class: "block text-gray-700" %>
+	  <%= f.text_field :monthly_income, class: "mt-1 block w-full rounded-md border border-gray-300 shadow-sm focus:outline-none focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 px-2 py-1 mb-5" %>
+
+	  <%= f.submit "Save Income", class: "block bg-transparent border border-indigo-500 h-10 px-3 rounded-lg text-indigo-700 hover:bg-indigo-400 hover:text-indigo-100 cursor-pointer" %>
+	<% end %>  
+</div>
