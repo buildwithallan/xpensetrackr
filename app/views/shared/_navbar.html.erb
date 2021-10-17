@@ -47,8 +47,9 @@
   	<%= link_to "Expense", new_expense_path, class: "block px-4 py-2 text-sm hover:bg-gray-200" %>
     <%= link_to "Sign Out", destroy_user_session_path, class: "block px-4 py-2 text-sm hover:bg-gray-200" %>
   </div>
-  <% else %>
-   <!-- mobile menu goes here -->
+
+   <% else %>
+   
   <div class="mobile-menu hidden md:hidden">
   	<%= link_to "Sign In", new_user_session_path, class: "block px-4 py-2 text-sm hover:bg-gray-200" %>
   	<%= link_to "Sign Up", new_user_registration_path, class: "block px-4 py-2 text-sm hover:bg-gray-200" %>
