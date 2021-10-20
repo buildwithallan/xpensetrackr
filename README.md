@@ -31,7 +31,7 @@ $ bundle install
 $ rails db:migrate
 ```
 
-#### How to run the test suit
+#### Run the test suit
 ```
 $ rspec
 ```
