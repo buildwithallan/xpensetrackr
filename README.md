@@ -1,24 +1,46 @@
-# README
+# xpensetrackr
+![example workflow](https://github.com/buildwithallan/xpensetrackr/actions/workflows/main.yml/badge.svg)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a minimalist web app for tracking your income and monthly expenses.
 
-Things you may want to cover:
+## Built with
+- Ruby On Rails
+- JavaScript
+- Tailwindcss
 
-* Ruby version
+## Live Demo
+[live demo link](https://xpensetracckr.herokuapp.com/)
 
-* System dependencies
+## Installation and Setup
+#### Clone this repository
+```
+$ git clone https://github.com/buildwithallan/xpensetrackr.git
+```
 
-* Configuration
+#### Navigate to the project directory
+```
+$ cd xpensetrackr
+```
+#### Install dependencies from the gemfile
+```
+$ bundle install
+```
 
-* Database creation
+#### Migrate database
+```
+$ rails db:migrate
+```
 
-* Database initialization
+#### How to run the test suit
+```
+$ rspec
+```
 
-* How to run the test suite
+#### Start the server
+You can start the rails server by running the command below:
+```
+$ rails s
+```
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
